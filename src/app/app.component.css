@@ -1,0 +1,72 @@
+.body-sec {
+  min-height: 90vh;
+}
+
+/* Inicio Butão Menu Style */
+.btn-menu-style {
+  /* left: 95vw; */
+  top: 92vh;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  transition: all 1s;
+  transform: translateX(19px);
+}
+
+.btn-menu-style:hover {
+  transform: translateX(5px);
+}
+
+.menu-effect01 {
+  position: absolute;
+  background-color: rgb(18,212,114);
+  box-shadow: 2px 2px 20px rgb(18,212,114);
+  box-shadow: 2px 3px 25px rgb(50,212,114);
+  box-shadow: 2px 2px 30px rgb(100,212,114);
+  width: 45px;
+  height: 25px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  transition: width 1s;
+}
+
+.seta-effect01 {
+  z-index: 1;
+  padding-right: 18px;
+  color: white;
+  transition: padding 1s;
+}
+
+/* Fim Butão Menu Style */
+
+/* Inicio Menu Style  */
+
+.menu-style {
+  border: 3px solid rgba(18,212,114,1);
+  box-shadow: 1px 1px 15px rgba(18,212,114,1);
+  background-color: whitesmoke;
+  top: 70px;
+  /* background-color: rgba(0,212,255,1); */
+  transition: all 1s;
+  width: 30vw;
+  height: 75vh;
+  position: fixed;
+  transform: translateX(75vh);
+  right: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.menuOpen {
+  transform: translateX(0px);
+}
+
+.menuLine {
+  border-bottom: 1px solid rgba(18,212,114,1);
+  box-shadow: 1px -14px 77px rgb(18 212 114);
+}
+
+/* Fim Menu Style */
+
+
+

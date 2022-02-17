@@ -1,0 +1,16 @@
+.header-style {
+  height: 45px;
+  background: rgb(18,212,114);
+  background: linear-gradient(90deg, rgba(18,212,114,1) 63%, rgba(0,212,255,1) 100%);
+  box-shadow: 1px 1px 11px rgb(18,212,114);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-style {
+  font-size: 30px;
+}

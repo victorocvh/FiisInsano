@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.body-sec {
+  min-height: 90vh;
+}
+
+.btn-menu-style {
+  /* left: 95vw; */
+  top: 95vh;
+  cursor: pointer;
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 1s;
+}
+
+.menu-effect01 {
+  position: absolute;
+  background-color: rgb(18,212,114);
+  box-shadow: 2px 2px 20px rgb(18,212,114);
+  box-shadow: 2px 3px 25px rgb(50,212,114);
+  box-shadow: 2px 2px 30px rgb(100,212,114);
+  width: 50px;
+  height: 25px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  transition: width 1s;
+}
+
+.menu-effect01:hover + .seta-effect01:hover {
+  width: 50px;
+}
+
+/* .menu-effect01:hover {
+  width: 50px;
+} */
+
+.seta-effect01 {
+  z-index: 1;
+  color: white;
+  transition: padding 1s;
+}
+
+/* .seta-effect01:hover {
+  padding-right: 50px;
+} */

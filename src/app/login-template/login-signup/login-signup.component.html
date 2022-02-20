@@ -1,0 +1,83 @@
+<div class="container-login">
+
+  <!-- Section Header -->
+  <section class="w-100 mb-5" *ngIf="!signupBtnClicked">
+    <div class="message ">
+      <h1 class="h1-style">Aooba sô!! Você está prestes a se registrar na plataforma mais
+        totoza de fiis..
+      </h1>
+      <hr>
+    </div>
+  </section>
+
+  <!-- Section Cadastro -->
+  <section [formGroup]="this.userForm" class="w-100" *ngIf="!loading && !signupBtnClicked">
+    <div class="input-group mb-4">
+      <div class="input-group-prepend">
+        <span class="input-group-text ipt-style" id="basic-addon1">
+          <mat-icon>person</mat-icon>
+        </span>
+      </div>
+      <input formControlName="name" type="text" class="form-control" placeholder="Digite seu nome">
+      <span class="span-error" *ngIf="name?.invalid && (name?.dirty || name?.touched)">* Seu nome precisa conter no mínimo 4 letras</span>
+    </div>
+    <div class="input-group mb-4">
+      <div class="input-group-prepend">
+        <span class="input-group-text ipt-style" id="basic-addon1">
+          <mat-icon>email</mat-icon>
+        </span>
+      </div>
+      <input formControlName="email" type="email" class="form-control" placeholder="Digite seu e-mail">
+      <span class="span-error" *ngIf="email?.invalid && (email?.dirty || email?.touched)">* Seu email está incorreto</span>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text ipt-style" id="basic-addon1">
+          <mat-icon>password</mat-icon>
+        </span>
+      </div>
+      <span class="span-error" *ngIf="password?.invalid && (password?.dirty || password?.touched)">* Sua senha precisa de no mínimo 6 carateres</span>
+      <input formControlName="password" type="password" class="form-control" placeholder="Digite sua senha">
+    </div>
+
+    <div class="input-group mb-3 space">
+      <button (click)="doSignup()" class="btn btn-login" [disabled]="userForm.invalid">
+        Cadastrar
+      </button>
+      <a class="return" style="text-decoration: none;" routerLink="/">
+        <mat-icon>
+          keyboard_return
+        </mat-icon>
+        Voltar
+      </a>
+    </div>
+  </section>
+
+  <!-- Section Loading -->
+  <section style="display:flex; justify-content:center" class="w-100" *ngIf="loading">
+    <div class="loading-effect"></div>
+  </section>
+
+  <!-- Registro Sucesso -->
+  <section class="w-100" *ngIf="signupBtnClicked">
+    <div class="message">
+      <h1 class="h1-style" *ngIf="sucessSignup">Cadastro realizado com sucesso!! Caso deseja ativar o seu
+        usuário entre em contato por whatsapp. (11) 98938-7115
+      </h1>
+      <h1 class="h1-style" *ngIf="failedSignup">Cadastro não realizado!! E-mail já deve estar cadastrado. Para mais informações
+        entre em contato por whatsapp. (11) 98938-7115
+      </h1>
+      <hr>
+    </div>
+    <div style="width: 30%;">
+      <a class="return" style="justify-content: center;text-decoration: none;" routerLink="/">
+        <mat-icon>
+          keyboard_return
+        </mat-icon>
+        Voltar
+      </a>
+    </div>
+  </section>
+
+</div>
+

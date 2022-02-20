@@ -32,7 +32,7 @@
 
 .seta-effect01 {
   z-index: 1;
-  padding-right: 18px;
+  padding-right: 45px;
   color: white;
   transition: padding 1s;
 }
@@ -46,6 +46,7 @@
   box-shadow: 1px 1px 15px rgba(18,212,114,1);
   background-color: whitesmoke;
   top: 70px;
+  z-index: 5;
   /* background-color: rgba(0,212,255,1); */
   transition: all 1s;
   width: 30vw;
@@ -53,7 +54,7 @@
   position: fixed;
   transform: translateX(75vh);
   right: 0;
-  border-top-left-radius: 30px;
+  border-top-left-radius: 42px;
   border-bottom-left-radius: 30px;
 }
 

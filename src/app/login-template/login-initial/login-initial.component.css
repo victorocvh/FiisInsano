@@ -1,0 +1,30 @@
+.btn {
+  transition: all .1s;
+  box-shadow: 1px 3px 5px #BDB9B9;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-login {
+  border-radius: 10px;
+  background-color: #12D472;
+  color: white;
+  font-family: 'Roboto';
+}
+
+.btn-cadastro {
+  border-radius: 10px;
+  background-color: #14743E;
+  color: white;
+  font-family: 'Roboto';
+}
+
+.message {
+  font-family: 'Roboto Mono Regular';
+}
+
+.h1-style {
+  color: #12D472;
+}

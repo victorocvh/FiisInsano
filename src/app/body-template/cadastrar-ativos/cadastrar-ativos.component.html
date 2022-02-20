@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="sub-container">
+
+
+    <form (ngSubmit)="onSubmit()">
+
+      <div class="input-group mb-2">
+        <div class="f input-group-prepend">
+          <span class="input-group-text">Cod Ativo</span>
+        </div>
+        <input name="ativoNome" [(ngModel)]="ativo.Nome" type="text" class="f form-control" placeholder="#">
+      </div>
+
+      <div class="input-group mb-2">
+        <div class="f input-group-prepend">
+          <span class="input-group-text">Quantidade</span>
+        </div>
+        <input name="ativoQtd" [(ngModel)]="ativo.Qtd" type="text" class="f form-control">
+      </div>
+
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <span class="input-group-text">R$</span>
+        </div>
+        <input class="form-control f" name="ativoValue" currencyMask [(ngModel)]="ativo.Valor" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
+      </div>
+
+      <button type="submit" class="btn btn-cadastro">
+        Adicionar Ativo
+      </button>
+
+
+    </form>
+
+  </div>
+</div>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BodyTemplateComponent } from './body-template.component';
+import { CadastrarAtivosComponent } from './cadastrar-ativos.component';
 
-describe('BodyTemplateComponent', () => {
-  let component: BodyTemplateComponent;
-  let fixture: ComponentFixture<BodyTemplateComponent>;
+describe('CadastrarAtivosComponent', () => {
+  let component: CadastrarAtivosComponent;
+  let fixture: ComponentFixture<CadastrarAtivosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BodyTemplateComponent ]
+      declarations: [ CadastrarAtivosComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BodyTemplateComponent);
+    fixture = TestBed.createComponent(CadastrarAtivosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

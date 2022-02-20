@@ -1,0 +1,49 @@
+<div class="container-login">
+
+  <!-- Section Header -->
+  <section class="w-100">
+    <div class="message mb-5">
+      <h1 class="h1-style">Aoooba sô!! Espero que não tenha esquecido
+        seu login.. :)
+      </h1>
+      <hr>
+    </div>
+  </section>
+
+  <!-- Section Body Login -->
+  <section class="w-100" *ngIf="!loading">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text ipt-style" id="basic-addon1">
+          <mat-icon>person</mat-icon>
+        </span>
+      </div>
+      <input [(ngModel)]="this.user.email" type="email" class="form-control" placeholder="Digite seu e-mail" aria-label="Usuário" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text ipt-style" id="basic-addon1">
+          <mat-icon>password</mat-icon>
+        </span>
+      </div>
+      <input [(ngModel)]="this.user.password" type="password" class="form-control" placeholder="Digite sua senha" aria-label="Senha" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3 space">
+      <button (click)="doLogin()" class="btn btn-login">
+        Entrar
+      </button>
+      <a class="return" style="text-decoration: none;" routerLink="/">
+        <mat-icon>
+          keyboard_return
+        </mat-icon>
+        Voltar
+      </a>
+    </div>
+  </section>
+
+  <!-- Section Loading -->
+  <section class="w-100" style="display: flex; justify-content: center;" *ngIf="loading">
+    <div class="loading-effect"></div>
+  </section>
+
+</div>

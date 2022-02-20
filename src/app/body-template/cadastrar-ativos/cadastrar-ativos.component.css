@@ -1,0 +1,46 @@
+.container {
+  min-width: 100vw;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-container {
+  min-width: 50%;
+  height: 60%;
+  position: absolute;
+  border: 5px solid #10C76B;
+  box-shadow: 1px 1px 0px #10C76B;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: test 1s infinite alternate;
+}
+
+@keyframes test {
+  100% {
+    box-shadow: 1px 1px 15px #10C76B;
+  }
+}
+
+.btn-cadastro {
+  width: 100%;
+  background-color: #10C76B;
+  box-shadow: 3px 3px 5px #C9C9C9;
+  transition: all .1s;
+  color: white;
+}
+
+.f {
+  box-shadow: 3px 3px 5px #C9C9C9;
+  outline: none !important;
+}
+
+.btn-cadastro:hover {
+  transform: scale(1.05);
+}

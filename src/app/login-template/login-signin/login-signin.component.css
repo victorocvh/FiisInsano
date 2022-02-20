@@ -1,0 +1,76 @@
+@import url('../login-style.css');
+
+.container-login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ipt-style {
+  background-color: #12D472 !important;
+  border: 1px solid #12D472;
+  border-radius: 0;
+  color: white;
+  box-shadow: 1px 3px 5px #BDB9B9;
+  border-top-left-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 85px;
+  border-bottom-left-radius: 5px;
+}
+
+::placeholder {
+  color: gainsboro;
+  font-size: 0.8rem;
+}
+
+.form-control {
+  box-shadow: 1px 3px 5px #BDB9B9;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #12D472;
+}
+
+.btn-login {
+  width: 50%;
+  background-color: #12D472;
+  color: white;
+  font-family: 'Roboto';
+  box-shadow: 1px 3px 5px #BDB9B9;
+}
+
+
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.return {
+  margin-left: 5px;
+  display: flex;
+  min-width: 13%;
+  justify-content: space-between;
+  align-items: center;
+  color: #12D472;
+  cursor: pointer;
+  transition: all .1s;
+}
+
+.return:hover {
+  transform: scale(1.03);
+}
+
+.space {
+  display: flex; justify-content: space-between;
+}
+
+
+
+
+

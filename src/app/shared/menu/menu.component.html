@@ -1,0 +1,7 @@
+<a *ngFor="let item of menuList, let i = index"
+  class="item"
+  routerLink="{{menuListHref[i]}}"
+  routerLinkActive="active">
+  {{item}}
+</a>
+

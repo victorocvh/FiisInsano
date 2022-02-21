@@ -1,14 +1,12 @@
 .header-style {
   height: 45px;
-  background: rgb(18,212,114);
-  background: linear-gradient(90deg, rgba(18,212,114,1) 63%, rgba(0,212,255,1) 100%);
-  box-shadow: 1px 1px 11px rgb(18,212,114);
+  background: rgba(18,212,114,0.3);
+  background: linear-gradient(90deg, #14743E 63%, #1DAD5C 100%);
+  box-shadow: 1px 1px 11px rgba(0, 0, 0,0.9);
   color: white;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
   align-items: center;
   flex-direction: column;
 }

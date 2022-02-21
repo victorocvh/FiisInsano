@@ -1,6 +1,6 @@
 .btn {
   transition: all .1s;
-  box-shadow: 1px 3px 5px #BDB9B9;
+  box-shadow: 1px 1px 2px rgba(255,255,255,0.3);
 }
 
 .btn:hover {

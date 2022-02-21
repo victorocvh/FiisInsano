@@ -25,7 +25,7 @@ export class LoginSigninComponent implements OnInit {
     setTimeout(() => {
       this.fireAuthService.signin(this.user).then(res => {
         this.loading = false;
-        this.router.navigateByUrl('i/index');
+        this.router.navigateByUrl('h/home/index');
       }).catch(error => {
         this.loading = false;
       });

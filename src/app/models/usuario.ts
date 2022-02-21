@@ -26,3 +26,7 @@ export class UserDB {
     this.ativo = 0;
   }
 }
+
+export class UserUID {
+  public uid : string;
+}

@@ -14,12 +14,14 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { MenuComponent } from './shared/menu/menu.component';
 import { LoginTemplateComponent } from './login-template/login-template.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderTemplateComponent,
     BodyTemplateComponent,
     MenuComponent,
+    HeaderTemplateComponent,
     LoginTemplateComponent,
   ],
   imports: [
@@ -28,6 +30,7 @@ import { LoginTemplateComponent } from './login-template/login-template.componen
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

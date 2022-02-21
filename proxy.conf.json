@@ -1,0 +1,12 @@
+
+{
+  "http://localhost:4200/": {
+    "target": "https://www.fundsexplorer.com.br/ranking",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
+

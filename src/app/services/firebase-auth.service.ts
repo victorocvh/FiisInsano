@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { Router } from '@angular/router';
 import { Console } from 'console';
 import * as moment from 'moment';
 import { map } from 'rxjs';
@@ -13,7 +14,8 @@ import { UserDB, Usuario } from '../models/usuario';
 export class FirebaseAuthService {
 
   constructor(public firebaseAuth : AngularFireAuth,
-    private db: AngularFireDatabase) { }
+    private db: AngularFireDatabase,
+    private route: Router) { }
 
   private isLoggedIn = false;
 
@@ -35,21 +37,25 @@ export class FirebaseAuthService {
     })
   }
 
-   async auth(email: string) : Promise<any> {
+   async auth(email: string) : Promise<string[]> {
     let emailDecoded = atob(email);
     return await this.firebaseAuth.fetchSignInMethodsForEmail(emailDecoded).then(res => {
+      debugger;
       return res;
     }).catch(res => {
+      debugger;
       return [];
     })
   }
 
   logout() {
     this.firebaseAuth.signOut();
-    localStorage.removeItem('uid');
+    localStorage.clear();
+    this.route.navigate(['']);
   }
 
   private saveUserInformations(user: Usuario) {
+    debugger;
     this.db.list('users').push(new UserDB(user));
   }
 

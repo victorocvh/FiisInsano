@@ -37,8 +37,17 @@
 }
 
 .f {
-  box-shadow: 3px 3px 5px #C9C9C9;
+  /* box-shadow: 1px 1px 5px #10C76B; */
   outline: none !important;
+
+}
+
+.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: white;
+  background-color: #14743E;
+  border: 2px solid #14743E ;
 }
 
 .btn-cadastro:hover {

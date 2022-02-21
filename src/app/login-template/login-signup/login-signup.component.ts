@@ -46,11 +46,14 @@ export class LoginSignupComponent implements OnInit {
   get email() { return this.userForm.get('email')}
 
   doSignup() {
+    this.user.email = this.email?.value;
+    this.user.nome = this.name?.value;
+    this.user.password = this.password?.value;
+
     this.loading = true;
     setTimeout(() => {
       this.fireAuthService.signup(this.user)
       .then(_ => {
-        this.router.navigate(['/login-message'])
         this.loading = false;
         this.signupBtnClicked = true;
         this.sucessSignup = true;

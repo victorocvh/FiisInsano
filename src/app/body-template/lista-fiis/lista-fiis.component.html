@@ -1,5 +1,60 @@
-  <div class="item">
-a
-  </div>
+<div class="modal-body">
+
+  <!-- Section Header Carteira -->
+  <section class="w-100" style="color: white;">
+    <h2 style="padding:0; margin:0;">Sua Carteira</h2>
+    <h4 style="padding:0; margin:0;">Acompanhe aqui a sua lista de ativos</h4>
+  </section>
+
+
+  <table class="table-style">
+    <thead>
+      <tr class="text-center">
+        <th>
+          Rank
+        </th>
+        <th>
+          Ativo / Ticker
+        </th>
+        <th>
+          Alocação %
+        </th>
+        <th>
+          Preço Médio
+        </th>
+        <th>
+          Quantidade
+        </th>
+        <th>
+          Valor Total
+        </th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let item of this.listaAtivos, let i = index">
+      <tr class="text-center">
+        <td>{{i+1}}</td>
+        <td>{{item.atvCod}}</td>
+        <td>{{item.atvAlocacao.toFixed(2)}}%</td>
+        <td>{{item.atvPrecoMedio | currency : 'R$ ' : 'symbol'}}</td>
+        <td>{{item.atvQuantidade}}</td>
+        <td>{{item.atvValorTotal | currency : 'R$' : 'symbol'}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <div class="item" *ngFor="let item of this.listaAtivos">
+
+    <div>
+      Ativo {{item.atvCod}}
+    </div>
+
+    <div>
+      Valor {{item.atvQuantidade * item.atvPrecoMedio}}
+    </div>
+
+  </div> -->
+
+</div>
 
 

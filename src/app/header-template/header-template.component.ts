@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseAuthService } from '../services/firebase-auth.service';
 
 @Component({
   selector: 'app-header-template',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderTemplateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: FirebaseAuthService) { }
 
   ngOnInit(): void {
+  }
+
+  logout() {
+    this.auth.logout();
   }
 
 }

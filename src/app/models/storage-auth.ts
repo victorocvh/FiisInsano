@@ -9,5 +9,8 @@ export abstract class StorageAuth {
   // Email auth
   public static email = 'E5915B6915764E27AD5AA917C7702CAE';
 
+  // Time Request Fii Service (EndPoint) : Get Fiis By Tickers Name
+  public static timeRequestFiiService = 'E65A36FBBEDB4DF8BC769B81ABC29ED8';
+
 
 }

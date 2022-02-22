@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,16 +8,24 @@ export class FiisService {
 
   constructor(private http: HttpClient) { }
 
-  async get(ativo: string) {
-   return await this.http.get(`https://www.fundsexplorer.com.br/ranking`, {
+  get(ativosName: string[]) {
+   return this.http.get(environment.herokuApi + 'getfiis', {
      headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': 'true',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
+      'User-Agent': '*',
+      'Access-Control-Allow-Origin' : '*',
+      'Content-Type' : 'text/html'
      })
    });
+  }
+
+  getByTicker(ativos: string[]) {
+    return this.http.get(environment.herokuApi + 'getfiibyticket?tickerid=' + ativos.join(','), {
+      headers: new HttpHeaders({
+        'User-Agent': '*',
+        'Access-Control-Allow-Origin' : '*',
+        'Content-Type' : 'text/html'
+       })
+    })
   }
 
 }

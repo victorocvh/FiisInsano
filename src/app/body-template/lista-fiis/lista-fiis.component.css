@@ -10,6 +10,14 @@
   transition: all .1s;
 }
 
+.green {
+  color: rgb(18,212,114)
+}
+
+.red {
+  color: #E60000;
+}
+
 .item:hover {
   border: 1px solid #14743E;
   box-shadow: 0px 3px 5px #14743E;

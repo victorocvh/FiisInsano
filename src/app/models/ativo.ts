@@ -8,6 +8,7 @@ export class Ativo {
   public atvTipo: TipoAtvEnum;
   public atvValorTotal: number;
   public atvAlocacao: number;
+  public atvPrecoAtual: number;
   public key: string;
 
   /**
@@ -19,6 +20,7 @@ export class Ativo {
     this.atvPrecoMedio = atv == null ? 0: atv.atvPrecoMedio;
     this.key = key != null ? key : '';
     this.atvValorTotal = this.atvQuantidade * this.atvPrecoMedio;
+    this.atvPrecoAtual = 0;
   }
 
 }

@@ -23,6 +23,9 @@
           Preço Médio
         </th>
         <th>
+          Preço Atual
+        </th>
+        <th>
           Quantidade
         </th>
         <th>
@@ -37,6 +40,10 @@
         <td>{{item.atvCod}}</td>
         <td>{{item.atvAlocacao.toFixed(2)}}%</td>
         <td>{{item.atvPrecoMedio | currency : 'R$ ' : 'symbol'}}</td>
+        <td [class.green]="item.atvPrecoAtual != 0 && item.atvPrecoAtual > item.atvPrecoMedio"
+            [class.red]="item.atvPrecoAtual != 0 && item.atvPrecoAtual < item.atvPrecoMedio">
+            {{item.atvPrecoAtual | currency : 'R$' : 'symbol' }}
+        </td>
         <td>{{item.atvQuantidade}}</td>
         <td>{{item.atvValorTotal | currency : 'R$' : 'symbol'}}</td>
       </tr>

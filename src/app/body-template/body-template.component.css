@@ -49,7 +49,7 @@
 .menu-style {
   border: 3px solid rgba(18,212,114,1);
   box-shadow: 1px 1px 15px rgba(18,212,114,1);
-  background-color: whitesmoke;
+  background-color: rgb(31,31,31);
   top: 70px;
   z-index: 5;
   /* background-color: rgba(0,212,255,1); */

@@ -14,7 +14,7 @@ export const environment = {
     appId: "1:517318142580:web:751d2e7b5758d3c4803f21",
     measurementId: "G-XLGTTBZ9CQ"
   },
-  alphaAdvantageKey: '1AJECMXQJS923IHO'
+  herokuApi : 'http://127.0.0.1:5000/'
 };
 
 /*

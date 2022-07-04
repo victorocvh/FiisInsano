@@ -6,7 +6,8 @@ uma plataforma de controle de investimentos em fundos imobiliários.
 Talvez não esteja nos melhores padrões, normalmente quando eu desenvolvo
 eu desenvolvo seguindo o padrão que já está no projeto.
 
-Quero muito fazer parte da coders, se me derem a oportunidade não irão se arrepender.
+Quero muito fazer parte da coders, se me derem a oportunidade não irão se arrepender. 
+Me garanto em angular, javascript, typescript, no front end em geral.
 
 Como rodar a aplicação:
 

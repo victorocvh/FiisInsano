@@ -24,3 +24,4 @@ Esse projeto utiliza o firebase como banco de dados, e como backend a api que eu
 Tem alguns trechos de códigos que eu fiz para controlar a quantidade de requisições dos usuários a api,
 e também ao firebase. Por que quanto menos requisições eu fizer para o firebase, menos a aplicação gasta.
 
+Projeto ta em fase inicial, em fase de desenvolvimento ainda.

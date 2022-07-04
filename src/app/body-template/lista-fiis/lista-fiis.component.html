@@ -2,11 +2,12 @@
 
   <!-- Section Header Carteira -->
   <section class="w-100" style="color: white;">
-    <h2 style="padding:0; margin:0;">Sua Carteira</h2>
+    <h2 style="padding:0; margin:0;">Sua Carteira <a (click)="cadastrarAtivos()" style="font-size:15px;text-decoration: none;" class="btn-add-or-del">Clique aqui para adicionar ativos</a></h2>
     <h4 style="padding:0; margin:0;">Acompanhe aqui a sua lista de ativos</h4>
   </section>
 
 
+<div class="table-responsive">
   <table class="table-style">
     <thead>
       <tr class="text-center">
@@ -23,13 +24,22 @@
           Preço Médio
         </th>
         <th>
-          Preço Atual
+          Preço B3
         </th>
         <th>
           Quantidade
         </th>
         <th>
-          Valor Total
+          Custo Total
+        </th>
+        <th>
+          Valor Mercado
+        </th>
+        <th>
+          Ideal
+        </th>
+        <th>
+          <!-- OPÇÕES P FAZER -->
         </th>
       </tr>
     </thead>
@@ -40,15 +50,42 @@
         <td>{{item.atvCod}}</td>
         <td>{{item.atvAlocacao.toFixed(2)}}%</td>
         <td>{{item.atvPrecoMedio | currency : 'R$ ' : 'symbol'}}</td>
-        <td [class.green]="item.atvPrecoAtual != 0 && item.atvPrecoAtual > item.atvPrecoMedio"
-            [class.red]="item.atvPrecoAtual != 0 && item.atvPrecoAtual < item.atvPrecoMedio">
-            {{item.atvPrecoAtual | currency : 'R$' : 'symbol' }}
+        <td [class.green]="item.atvPrecoMercado != 0 && item.atvPrecoMercado > item.atvPrecoMedio"
+            [class.red]="item.atvPrecoMercado != 0 && item.atvPrecoMercado < item.atvPrecoMedio">
+            {{item.atvPrecoMercado | currency : 'R$' : 'symbol' }}
         </td>
         <td>{{item.atvQuantidade}}</td>
         <td>{{item.atvValorTotal | currency : 'R$' : 'symbol'}}</td>
+        <td [ngClass]="{'green' : item.atvPrecoMercado > item.atvPrecoMedio,
+          'red' : item.atvPrecoMercado < item.atvPrecoMedio}"
+        >{{(item.atvQuantidade * item.atvPrecoMercado) | currency : 'R$' : 'symbol'}}</td>
+        <td>
+          <!-- TD IDEAL -->
+          N/A
+        </td>
+        <td>
+          <!-- OPÇÕES  -->
+          <span style="display: flex; justify-content: space-evenly;">
+          <mat-icon class="btn-add-or-del">
+            add_circle_outline
+          </mat-icon>
+
+          <mat-icon class="btn-add-or-del">
+            delete
+          </mat-icon>
+          </span>
+        </td>
       </tr>
     </tbody>
+
+    <tbody *ngIf="this.listaAtivos.length <= 0">
+      <tr class="text-center">
+        <td colspan="9">Nenhum ativo foi adicionado ainda</td>
+      </tr>
+    </tbody>
+
   </table>
+</div>
 
   <!-- <div class="item" *ngFor="let item of this.listaAtivos">
 

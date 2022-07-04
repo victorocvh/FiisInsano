@@ -1,4 +1,5 @@
 import { Console } from "console";
+import * as moment from "moment";
 import { UserUID } from "./usuario";
 
 export class Ativo {
@@ -9,7 +10,9 @@ export class Ativo {
   public atvValorTotal: number;
   public atvAlocacao: number;
   public atvPrecoAtual: number;
+  public atvPrecoMercado: number;
   public key: string;
+  public dataCompra: moment.Moment;
 
   /**
    *
@@ -22,6 +25,7 @@ export class Ativo {
     this.atvValorTotal = this.atvQuantidade * this.atvPrecoMedio;
     this.atvPrecoAtual = 0;
   }
+
 
 }
 
@@ -36,14 +40,16 @@ export enum TipoAtvEnum {
 export class AtivoDB extends UserUID {
   public atvCod : string;
   public atvQuantidade: number;
-  public atvPrecoMedio: number;
+  public atvPrecoAtual: number;
   public atvTipo: number;
+  public dataCompra: string;
 
   constructor(ativo: Ativo) {
     super();
     this.atvCod = ativo.atvCod;
-    this.atvPrecoMedio = ativo.atvPrecoMedio;
+    this.atvPrecoAtual = ativo.atvPrecoAtual;
     this.atvQuantidade = ativo.atvQuantidade;
     this.atvTipo = ativo.atvTipo;
+    this.dataCompra = ativo.dataCompra.toISOString();
   }
 }

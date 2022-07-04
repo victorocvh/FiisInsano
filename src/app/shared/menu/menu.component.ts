@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  public menuList = ['Home', 'Cadastrar Ativos'];
-  public menuListHref = ['../../h/home/index', '../../h/home/cadastrar-ativos'];
+  public menuList = ['Home', 'Dashboard'];
+  public menuListHref = ['index', 'dashboard'];
 
   constructor() { }
 

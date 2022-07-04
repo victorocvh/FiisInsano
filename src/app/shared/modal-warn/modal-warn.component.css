@@ -1,0 +1,15 @@
+.div-warn-style {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.warn-btn {
+  width: 45%;
+  background-color: #12D472;
+  color: white;
+  font-family: 'Roboto';
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px rgb(255 255 255 / 30%)
+}

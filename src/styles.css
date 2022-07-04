@@ -84,3 +84,32 @@ body { overflow: hidden;position: absolute; margin: 0; font-family: Roboto, "Hel
   }
 }
 
+
+.modal-style .mat-dialog-container {
+  background-color: rgb(31,31,31) !important;
+  box-shadow: 1px 1px 5px rgba(255,255,255,0.5);
+  color: white;
+}
+
+
+/* Scroll style */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:  rgb(33,33,33);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(61 61 61);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(61 61 61);
+}

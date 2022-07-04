@@ -11,7 +11,7 @@
   </section>
 
   <!-- Section Cadastro -->
-  <section [formGroup]="this.userForm" class="w-100" *ngIf="!loading && !signupBtnClicked">
+  <section (keyup.enter)="doSignup()" [formGroup]="this.userForm" class="w-100" *ngIf="!loading && !signupBtnClicked">
     <div class="input-group mb-4">
       <div class="input-group-prepend">
         <span class="input-group-text ipt-style" id="basic-addon1">
@@ -41,7 +41,7 @@
     </div>
 
     <div class="input-group mb-3 space">
-      <button (click)="doSignup()" class="btn btn-login" [disabled]="userForm.invalid">
+      <button  (click)="doSignup()" class="btn btn-login" [disabled]="userForm.invalid">
         Cadastrar
       </button>
       <a class="return" style="text-decoration: none;" routerLink="/">
@@ -64,12 +64,17 @@
       <h1 class="h1-style" *ngIf="sucessSignup">Cadastro realizado com sucesso!! Caso deseja ativar o seu
         usuário entre em contato por whatsapp. (11) 98938-7115
       </h1>
-      <h1 class="h1-style" *ngIf="failedSignup">Cadastro não realizado!! E-mail já deve estar cadastrado. Para mais informações
-        entre em contato por whatsapp. (11) 98938-7115
-      </h1>
-      <hr>
+      <div *ngIf="failedSignup">
+        <h1 class="h1-style" *ngIf="failedSignup">Cadastro não efetuado!!
+        </h1>
+        <hr style="color:#12D472; margin-bottom: 18px; margin-top: 5px;">
+        <p style="font-size: 19px; color: #276646;">
+          E-mail já deve estar cadastrado. Para mais informações
+          entre em contato por whatsapp. (11) 98938-7115
+        </p>
+      </div>
     </div>
-    <div style="width: 30%;">
+    <div style="width: 30%; display: flex; justify-content: flex-start;">
       <a class="return" style="justify-content: center;text-decoration: none;" routerLink="/">
         <mat-icon>
           keyboard_return

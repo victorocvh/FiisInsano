@@ -1,0 +1,26 @@
+.align-container {
+  margin: 2% 2% 0% 2%;
+  color: white;
+}
+
+.black-card {
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgb(61,61,61);
+  background-color: rgb(33,33,33);
+  min-height: 200px;
+  flex: 1 1 471px;
+  margin: 15px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.2em;
+}
+
+.black-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.p-title {
+  text-align: center;
+  margin-top: 1%;
+}

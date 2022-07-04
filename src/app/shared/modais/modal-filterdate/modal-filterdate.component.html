@@ -1,0 +1,25 @@
+<div class="modal-body">
+
+  <div class="input-group mb-2">
+    <div class="f input-group-prepend">
+      <span class="input-group-text">Ano</span>
+    </div>
+
+    <select class="select-style form-select">
+      <option>1999</option>
+      <option>2021</option>
+      <option selected>2022</option>
+    </select>
+  </div>
+
+  <div class="input-group mb-2">
+    <div class="f input-group-prepend">
+      <span class="input-group-text">Mês</span>
+    </div>
+
+    <select class="select-style form-select">
+      <option [attr.selected]="i == 1" *ngFor="let item of [].constructor(12); let i = index;">{{getMonth(i+1)}}</option>
+    </select>
+  </div>
+
+</div>

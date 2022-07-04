@@ -4,11 +4,19 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { CurrencyMaskModule } from "ng2-currency-mask";
 import { HeaderTemplateComponent } from "../header-template/header-template.component";
-import { AuthGuardGuard } from "../services/auth-guard.guard";
+
 import { FiisService } from "../services/fiis.service";
 import { BodyTemplateComponent } from "./body-template.component";
-import { CadastrarAtivosComponent } from "./cadastrar-ativos/cadastrar-ativos.component";
 import { ListaFiisComponent } from "./lista-fiis/lista-fiis.component";
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import { SharedModule } from "../shared/shared.module";
+import { MAT_DATE_LOCALE } from "@angular/material/core";
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuardGuard } from "../services/auth-guard.guard";
 
 const routes: Routes = [
   {
@@ -19,7 +27,7 @@ const routes: Routes = [
         path: 'index', component: ListaFiisComponent
       },
       {
-        path: 'cadastrar-ativos', component: CadastrarAtivosComponent
+        path: 'dashboard', component: DashboardComponent
       }
     ]
   },
@@ -28,16 +36,15 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     ListaFiisComponent,
-    CadastrarAtivosComponent,
+    DashboardComponent,
   ],
   imports: [
     RouterModule.forChild(routes),
-    ReactiveFormsModule,
-    FormsModule,
-    CurrencyMaskModule,
-    CommonModule,
+    SharedModule,
+    MatDatepickerModule,
   ],
-  providers: [],
+  providers: [MatDatepickerModule,
+  {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}],
   bootstrap: []
 })
 export class BodyModule { }

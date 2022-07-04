@@ -10,5 +10,5 @@ export const environment = {
     appId: "1:517318142580:web:751d2e7b5758d3c4803f21",
     measurementId: "G-XLGTTBZ9CQ"
   },
-  herokuApi : 'http://vitonesapi.herokuapp.com/'
+  herokuApi : 'https://vitonesapi.herokuapp.com/'
 };

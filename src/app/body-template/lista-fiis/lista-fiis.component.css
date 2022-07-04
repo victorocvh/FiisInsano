@@ -15,7 +15,8 @@
 }
 
 .red {
-  color: #E60000;
+  /* font-family: 'Roboto'; */
+  color: #E84545;
 }
 
 .item:hover {
@@ -56,4 +57,14 @@ th,td {
 td {
   background: rgb(33, 33, 33);
   border-bottom: 1px solid rgb(18,212,114);
+}
+
+.btn-add-or-del {
+  color:  rgb(18,212,114);
+  cursor: pointer;
+  transition: all .1s;
+}
+
+.btn-add-or-del:hover {
+  transform: scale(1.1);
 }

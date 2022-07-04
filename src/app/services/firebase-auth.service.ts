@@ -40,10 +40,8 @@ export class FirebaseAuthService {
    async auth(email: string) : Promise<string[]> {
     let emailDecoded = atob(email);
     return await this.firebaseAuth.fetchSignInMethodsForEmail(emailDecoded).then(res => {
-      debugger;
       return res;
     }).catch(res => {
-      debugger;
       return [];
     })
   }
@@ -55,7 +53,6 @@ export class FirebaseAuthService {
   }
 
   private saveUserInformations(user: Usuario) {
-    debugger;
     this.db.list('users').push(new UserDB(user));
   }
 

@@ -11,7 +11,7 @@
   </section>
 
   <!-- Section Body Login -->
-  <section class="w-100" *ngIf="!loading">
+  <section (keyup.enter)="doLogin()" class="w-100" *ngIf="!loading">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text ipt-style" id="basic-addon1">

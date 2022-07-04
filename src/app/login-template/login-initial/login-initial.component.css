@@ -9,14 +9,16 @@
 
 .btn-login {
   border-radius: 10px;
-  background-color: #12D472;
+  background: rgb(18,212,114);
+  background: linear-gradient(90deg, rgba(18,212,114,1) 62%, rgba(124,230,177,1) 97%);
   color: white;
   font-family: 'Roboto';
 }
 
 .btn-cadastro {
   border-radius: 10px;
-  background-color: #14743E;
+  background: rgb(18,128,65);
+  background: linear-gradient(90deg, rgba(18,128,65,1) 62%, rgba(67,153,104,1) 97%);
   color: white;
   font-family: 'Roboto';
 }

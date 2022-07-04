@@ -34,8 +34,6 @@ export class LoginGuardGuard implements CanActivate {
 
           this.auth.auth(emailJsonParse).then(res => {
             if (res.length >= 1) {
-              debugger;
-              console.log('res:: ', res);
               this.router.navigate(['h/home/index']);
               return false;
             }

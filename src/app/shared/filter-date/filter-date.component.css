@@ -1,0 +1,40 @@
+.btn-date {
+  font-size: 25px;
+  cursor: pointer;
+  color: rgba(18,212,114,1);
+  position: absolute;
+  margin-right: 5px;
+  /* linear-gradient(90deg, rgba(18,212,114,1) 62%, rgba(124,230,177,1) 97%); */
+}
+
+.divOpenDate {
+  position: absolute;
+  width: 200px;
+  z-index: 10;
+  height: 200px;
+  top: -5px;
+  background-color: rgb(31,31,31);
+  border: 1px solid rgb(51,51,51);
+  border-radius: 5px;
+}
+
+.input-date {
+  color:white;
+  background: rgb(31,31,31);
+  border: 1px solid #14743E;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 50px;
+  outline: none;
+  width: 100%;
+  text-align: center;
+}
+
+.relative-div {
+  position: relative;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+

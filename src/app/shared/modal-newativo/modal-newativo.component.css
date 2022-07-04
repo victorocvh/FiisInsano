@@ -1,0 +1,175 @@
+
+
+.container {
+  min-width: 100vw;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-container {
+  min-width: 50%;
+  height: 60%;
+  position: absolute;
+  border: 5px solid #10C76B;
+  box-shadow: 1px 1px 0px #10C76B;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: test 1s infinite alternate;
+}
+
+
+
+@keyframes test {
+  100% {
+    box-shadow: 1px 1px 15px #10C76B;
+  }
+}
+
+.btn-cadastro {
+  width: 100%;
+  background-color: #14743E;
+  box-shadow: 1px 1px 1px rgb(31,31,31);
+  transition: color 1s;
+  color: white;
+}
+
+.error {
+  color: #FC3F26;
+  width: 100%;
+}
+
+.f {
+  box-shadow: 1px 1px 1px rgb(31,31,31);
+  outline: none !important;
+}
+
+.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: white;
+  background-color: #14743E;
+  border: 2px solid #14743E ;
+}
+
+.input {
+  color:white;
+  background: rgb(31,31,31);
+  border: 1px solid #14743E;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 39.97px;
+  outline: none;
+  text-align: center;
+}
+
+/* Angular Date Picker Component Custom */
+::ng-deep mat-calendar[class*='date-fiis'] {
+  background-color: rgb(31,31,31);
+  border: 1px solid #10C76B;
+  color: white !important;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-month-view > table > tbody > tr > td > button > div {
+  color: white !important;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-month-view > table > tbody > tr > td {
+  color: white !important;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-month-view > table > thead > tr {
+  color: white !important;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+mat-calendar-header > div > div > button {
+  color: white !important;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-multi-year-view > table > tbody > tr > td > button > div {
+  color: white !important;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-year-view > table > tbody > tr > td > button > div  {
+  color: white !important;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-year-view > table > tbody > tr > td {
+  color: white !important;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-month-view > table > tbody > tr > td > button >
+.mat-calendar-body-selected {
+  background-color: #14743E !important;
+  border: 1px solid white;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-multi-year-view > table > tbody > tr > td > button >
+.mat-calendar-body-selected {
+  background-color: #14743E !important;
+  border: 1px solid white;
+}
+
+::ng-deep mat-calendar[class*='date-fiis'] >
+div > mat-year-view > table > tbody > tr > td > button >
+.mat-calendar-body-selected {
+  background-color: #14743E !important;
+  border: 1px solid white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close {
+  color: #10C76B;
+  cursor: pointer;
+}
+
+.formSize50  {
+  width: 50%;
+}
+
+.formSize100 {
+  width: 100%;
+}
+
+.select-style {
+  outline: none;
+  background-color: rgb(31,31,31);
+  border: 2px solid #14743E;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgb(31,31,31);
+}
+
+
+::ng-deep
+ng-select[id="ng-newativo"] > div > div > div > input {
+  color: white !important;
+}
+
+::ng-deep
+ng-select[id="ng-newativo"] > ng-dropdown-panel {
+  background-color: rgb(31,31,31);
+  box-shadow: 1px 2px 5px #14743E;
+}

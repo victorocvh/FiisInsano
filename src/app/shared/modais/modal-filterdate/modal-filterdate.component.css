@@ -1,0 +1,23 @@
+.f {
+  box-shadow: 1px 1px 1px rgb(31,31,31);
+  outline: none !important;
+}
+
+.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: white;
+  background-color: #14743E;
+  border: 2px solid #14743E ;
+}
+
+.select-style {
+  outline: none;
+  background-color: rgb(31,31,31);
+  border: 2px solid #14743E;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgb(31,31,31);
+}

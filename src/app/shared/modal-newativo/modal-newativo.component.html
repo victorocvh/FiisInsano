@@ -1,0 +1,126 @@
+<div style="height: 100%; width: 100%;">
+  <div class="header">
+    <h2 style="margin: 0;">Cadastrar Ativos</h2>
+    <a (click)="close()">
+      <mat-icon class="close" style="margin: 0;">
+        close
+      </mat-icon>
+    </a>
+  </div>
+
+  <div class="mt-3" style="width: 100%; display: flex; justify-content: center;">
+
+    <form (ngSubmit)="onSubmit()" [ngClass]="{'formSize100' : verifyMobile(), 'formSize50': verifyDesktop()}">
+      <div class="input-group mb-2 mt-3">
+        <span style="display: block;" *ngIf="this.showAtivoError" class="error">*Você precisa selecionar um ativo</span>
+        <div class="f input-group-prepend">
+          <span class="input-group-text">Cod Ativo</span>
+        </div>
+        <ng-select id="ng-newativo" style="color: white;" class="select-style form-select"
+        [items]="this.fiisDB"
+        name="select"
+        bindLabel="CodAtivo"
+        bindValue="CodAtivo"
+        [(ngModel)]="this.ativo.atvCod">
+        </ng-select>
+      </div>
+
+
+
+
+      <div class="input-group mb-2 mt-3">
+        <span style="display: block;" *ngIf="this.showQtdError" class="error">*Quantidade tem que ser maior que zero</span>
+        <div class="f input-group-prepend">
+          <span class="input-group-text">Quantidade</span>
+        </div>
+        <input name="ativoQtd" [(ngModel)]="ativo.atvQuantidade" type="number" class="input f form-control">
+      </div>
+
+      <div class="input-group mb-2 mt-3">
+        <span style="display: block;" *ngIf="this.showMoneyError" class="error">*O valor pago tem que ser maior que zero</span>
+        <div class="input-group-prepend">
+          <span class="input-group-text">R$</span>
+        </div>
+        <input class="form-control input f" name="ativoValue" currencyMask [(ngModel)]="ativo.atvPrecoAtual" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
+      </div>
+
+      <div class="input-group mb-2 mt-3" style="flex-wrap: nowrap;">
+        <div class="input-group-preprend">
+          <span class="input-group-text">Data</span>
+        </div>
+
+        <div style="width:85%; flex:1;">
+            <input readonly="readonly" class="form-control input f" name="datepicker" [(ngModel)]="this.ativo.dataCompra"
+            [matDatepicker]="picker">
+            <a style="z-index: 10;right: 5px; position: absolute; top: 7px;" (click)="picker.open()">
+              <mat-icon mat-raised-button style="color: #10C76B">
+                calendar_month
+              </mat-icon>
+            </a>
+            <mat-datepicker panelClass="date-fiis" #picker></mat-datepicker>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-cadastro mt-2">
+        Adicionar Ativo
+      </button>
+    </form>
+
+  </div>
+
+
+  <!-- <div class="container">
+    <div class="sub-container">
+
+
+      <form (ngSubmit)="onSubmit()">
+
+        <div class="input-group mb-2">
+          <div class="f input-group-prepend">
+            <span class="input-group-text">Cod Ativo</span>
+          </div>
+          <input autocomplete="off" name="ativoNome" [(ngModel)]="ativo.atvCod" type="text" class="input f form-control" placeholder="#">
+        </div>
+
+        <div class="input-group mb-2">
+          <div class="f input-group-prepend">
+            <span class="input-group-text">Quantidade</span>
+          </div>
+          <input name="ativoQtd" [(ngModel)]="ativo.atvQuantidade" type="text" class="input f form-control">
+        </div>
+
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text">R$</span>
+          </div>
+          <input class="form-control input f" name="ativoValue" currencyMask [(ngModel)]="ativo.atvPrecoMedio" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
+        </div>
+
+        <div class="input-group mb-2">
+          <div class="input-group-preprend">
+            <span class="input-group-text">Data</span>
+          </div>
+
+          <div style="width:81%;">
+              <input readonly="readonly" class="form-control input f" name="datepicker" [(ngModel)]="dataSelecionada"
+              [matDatepicker]="picker">
+              <a style="z-index: 10;right: 5px; position: absolute; top: 7px;" (click)="picker.open()">
+                <mat-icon mat-raised-button style="color: #10C76B">
+                  calendar_month
+                </mat-icon>
+              </a>
+              <mat-datepicker panelClass="date-fiis" #picker></mat-datepicker>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-cadastro">
+          Adicionar Ativo
+        </button>
+
+
+      </form>
+
+    </div>
+  </div> -->
+
+</div>
